@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech Tracks Orientation — Momenta HIET KFS</title>
+  <meta name="description" content="نموذج تسجيل حضور فعالية Tech Tracks Orientation المقدّمة من أسرة Momenta بالمعهد العالي للهندسة والتكنولوجيا بكفر الشيخ." />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <!-- AOS (on-scroll animations) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- App styles (اتأكد إن الملف موجود كما كان) -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <img class="logo" src="assets/1.png" alt="شعار Momenta" />
+        <div class="title"><span style="color:#a1b8ff">Momenta Community</span><br>HIET KFS</div>
+      </div>
+      <div class="logo-strip">
+        <img src="assets/2.png" alt="شعار المعهد العالي للهندسة والتكنولوجيا بكفر الشيخ" title="HIET KFS" />
+        <img src="assets/4.png" alt="شعار رعاية الشباب" title="رعاية الشباب" />
+        <img src="assets/3.png" alt="شعار وزارة التعليم العالي والبحث العلمي" title="وزارة التعليم العالي" />
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- تعريف الفعالية -->
+    <section class="section" id="orientation">
+      <center>
+        <span class="badge" data-aos="zoom-in">فعالية جديدة</span>
+        <h1 class="headline" data-aos="fade-up">Tech Tracks Orientation</h1>
+        <p class="sub" data-aos="fade-up" data-aos-delay="80">
+          اللقاء التعريفي عن المسارات التقنية في المعهد، بتنظيم أسرة Momenta. هدفنا إنك تخرج برؤية واضحة عن كل مسار وخطوات البداية المناسبة لك.
+        </p>
+        <p class="sub" data-aos="fade-up" data-aos-delay="110">
+          سجّل بياناتك، ولو عندك سؤال محدد عن المسارات اكتبه في الاستمارة علشان نجاوب عليه خلال الفعالية.
+        </p>
+      </center>
+    </section>
+
+    <!-- نموذج التسجيل -->
+    <section class="section">
+      <h2 data-aos="fade-up">نموذج تسجيل الحضور</h2>
+      <div class="form-wrap">
+        <form id="signupForm" novalidate data-aos="fade-up" data-aos-delay="60">
+          <!-- الاسم -->
+          <div class="field">
+            <label for="fullName">الاسم الثلاثي بالعربية <span style="color:#8fb3ff">*</span></label>
+            <input id="fullName" name="fullName" type="text" placeholder="مثال: أحمد محمد علي" required minlength="7" aria-invalid="false" autocomplete="name" />
+            <div class="hint">يجب أن يتكوّن من ثلاث كلمات عربية على الأقل.</div>
+            <div class="error" id="nameError">فضلاً اكتب اسمك ثلاثي بالعربية.</div>
+          </div>
+
+          <!-- كود الطالب -->
+          <div class="field">
+            <label for="studentCode">كود الطالب (7 أرقام) <span style="color:#8fb3ff">*</span></label>
+            <input id="studentCode" name="studentCode" type="text" inputmode="numeric" pattern="^\d{7}$" maxlength="7" minlength="7" required placeholder="مثال: 2310456" aria-invalid="false" />
+            <div class="hint">اكتب كود الطالب المكوّن من 7 أرقام فقط.</div>
+            <div class="error" id="codeError">كود الطالب يجب أن يحتوي على 7 أرقام.</div>
+          </div>
+
+          <!-- الفرقة الدراسية -->
+          <div class="field">
+            <label for="level">الفرقة الدراسية <span style="color:#8fb3ff">*</span></label>
+            <select id="level" name="level" required aria-invalid="false">
+              <option value="" disabled selected>اختر الفرقة</option>
+              <option value="Preparatory">الإعدادية</option>
+              <option value="First">الأولى</option>
+              <option value="Second">الثانية</option>
+              <option value="Third">الثالثة</option>
+              <option value="Fourth">الرابعة</option>
+            </select>
+            <div class="error" id="levelError">فضلاً اختر الفرقة الدراسية.</div>
+          </div>
+
+          <!-- رقم الهاتف -->
+          <div class="field">
+            <label for="phone">رقم الموبايل (11 رقم) <span style="color:#8fb3ff">*</span></label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" pattern="^01[0-2,5]\d{8}$" maxlength="11" minlength="11" required placeholder="مثال: 01012345678" aria-invalid="false" />
+            <div class="hint">يبدأ بـ 010 أو 011 أو 012 أو 015 ويتكون من 11 رقماً.</div>
+            <div class="error" id="phoneError">رقم الموبايل غير صحيح.</div>
+          </div>
+
+          <!-- سؤال اختياري -->
+          <div class="field">
+            <label for="question">سؤالك عن المسارات (اختياري)</label>
+            <textarea id="question" name="question" placeholder="مثال: ما الفرق بين مسار البرمجة ومسار الذكاء الاصطناعي؟" rows="4" aria-invalid="false"></textarea>
+            <div class="hint">اكتب سؤالك لو حابب نجهّز له إجابة خلال الفعالية.</div>
+            <div class="error" id="questionError">فضلاً اكتب سؤالك أو اترك الحقل فارغًا.</div>
+          </div>
+
+          <!-- إجراء -->
+          <div class="actions">
+            <button id="submitBtn" type="submit">
+              <span class="btnText">تسجيل الحضور</span>
+            </button>
+            <span class="note">بالضغط على "تسجيل الحضور" فأنت توافق على استخدام بياناتك لأغراض تنظيم الفعالية فقط.</span>
+          </div>
+        </form>
+
+        <!-- لماذا التسجيل -->
+        <div class="card" data-aos="fade-up" data-aos-delay="120">
+          <h3 style="margin-top:0">ليه تسجّل؟</h3>
+          <p>
+            التسجيل بيساعدنا نجهّز لك التجربة الأفضل في فعالية <strong>Tech Tracks Orientation</strong>، علشان تكون كل التفاصيل منظمة وواضحة من أول لحظة.
+          </p>
+          <ul style="margin:10px 0 0 18px; color:var(--muted);">
+            <li>أولوية الحضور داخل القاعة والتأكد من توافر مقعد مناسب.</li>
+            <li>الاطلاع المبكر على الأسئلة المرسلة يتيح لنا تقديم إجابات دقيقة وشاملة.</li>
+            <li>يساعد فريق التنظيم على تقدير عدد الحضور وتجهيز المواد المناسبة لكل مسار.</li>
+            <li>تعرف عملي على خريطة المسارات التقنية المتاحة وخطوات البداية المقترحة لكل مسار.</li>
+            <li>فرصة للتواصل المباشر مع فريق Momenta وطلاب لديهم خبرة سابقة في هذه المسارات.</li>
+            <li>وصول تفاصيل الفعالية وجدول الجلسات في رسالة تأكيد بعد التسجيل.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- بطل بصري (اختياري كما هو) -->
+    <section class="hero">
+      <div>
+        <p class="sub" data-aos="fade-up" data-aos-delay="120">
+          هدفنا في <strong>Tech Tracks Orientation</strong> إنك تخرج من الفعالية وعندك رؤية وخطة بداية واضحة تناسب مستواك واهتماماتك.
+        </p>
+      </div>
+      <div class="hero-card" data-aos="fade-left">
+        <div class="glow" aria-hidden="true"></div>
+        <img src="assets/5.png" alt="Momenta Robot" />
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <div class="inner" id="toastInner">تم التسجيل بنجاح</div>
+  </div>
+
+  <footer>
+    Momenta <span id="year"></span> ©<br>المعهد العالي للهندسة والتكنولوجيا بكفر الشيخ.<br>جميع الحقوق محفوظة.
+  </footer>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- App script -->
+  <script defer src="./script.js"></script>
+</body>
+</html>
