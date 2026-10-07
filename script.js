@@ -1,6 +1,6 @@
 // === Google Apps Script Web App URL ===
 // Replace this URL with your actual deployed Web App URL if needed
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz4q12P3JzcRBnYmtoQumE1GXptvONzCNeufuBmZL5yWZ2rA9q2lf8WqDEd3H57YqoBzA/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwvBBt8OXsD7hZfVJWVS6K4P9_nTtTf3IARluQafpAjl85hpDjwXcRzTaY63PGYfZ4YCA/exec';
 
 // === DOM Elements ===
 const form = document.getElementById('signupForm');
